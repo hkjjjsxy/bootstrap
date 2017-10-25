@@ -4,7 +4,7 @@
 <meta name="author" content="{{ .Site.Params.authors }}">
 <meta name="generator" content="{{ .Hugo.Generator }}">
 
-<title>{{ if .IsHome }}{{ $.Site.Params.home_tagline }} · {{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }} · {{ .Site.Params.description }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
 
 <!-- Bootstrap core CSS -->
 {{ if eq .Site.Params.github true }}

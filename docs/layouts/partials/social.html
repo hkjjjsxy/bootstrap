@@ -3,13 +3,13 @@
 <meta name="twitter:site" content="@{{ .Site.Social.twitter }}">
 <meta name="twitter:creator" content="@{{ .Site.Social.twitter }}">
 <meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ if isset .Params "description" }}{{ .Site.Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:description" content="{{ if isset .Params "description" }}{{ .Page.Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ if .IsHome }}{{ .Site.BaseURL }}{{ .Site.Params.social_logo_path }}{{ else }}{{ .Site.BaseURL }}{{ .Site.Params.social_image_path }}{{ end }}">
 
 <!-- Facebook -->
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ if isset .Params "description" }}{{ .Site.Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:description" content="{{ if isset .Params "description" }}{{ .Page.Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{{ replace .Site.BaseURL "https://" "http://" }}{{ .Site.Params.social_image_path }}">
 <meta property="og:image:secure_url" content="{{ .Site.BaseURL}}{{ .Site.Params.social_image_path }}">
